@@ -1,0 +1,1 @@
+Interceptor folder contains the HttpInterceptorHandler to set up an fake HTTP server that will return a specified response for a specified GET request. One can append custom contenttype, headers, tokens in the GET/POST requests. Intercepts HttpRequest and handles them.
