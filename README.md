@@ -31,9 +31,14 @@ Start by cloning the project:
 git clone https://github.com/evry-bergen/reference-angular.git
 ```
 
-When the project is cloned, install the npm packages:
+When the project is cloned, 
+first update the angular-cli locally on your system and node version on system to 8.9 or greater. After that install the npm packages:
 
 ```
+npm uninstall @angular/cli
+npm cache clean
+npm install @angular/cli@latest
+npm install -g npm@latest
 npm install
 ```
 

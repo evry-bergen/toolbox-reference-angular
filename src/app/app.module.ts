@@ -29,10 +29,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     SharedModule,
     AdminModule,
     AppRouterModule,
-    BrowserAnimationsModule,
     ErrorModule,
     FormGroupModule,
     GoogleMaterialModule,
