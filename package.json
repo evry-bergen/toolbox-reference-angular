@@ -35,7 +35,7 @@
     "jquery": "^3.3.1",
     "popper.js": "^1.14.4",
     "rxjs": "^6.3.3",
-    "rxjs-compat": "^6.2.2",
+    "rxjs-compat": "^6.3.3",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
@@ -47,7 +47,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~10.5.7",
     "codelyzer": "~4.4.3",
-    "jasmine-core": "~3.1.0",
+    "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "^3.0.0",
     "karma-chrome-launcher": "~2.2.0",
