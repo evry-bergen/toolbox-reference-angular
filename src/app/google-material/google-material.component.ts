@@ -19,8 +19,8 @@ export class GoogleMaterialComponent {
   constructor() {
     this.minDate = new Date();
     this.maxDate = new Date();
-    this.minDate.setDate(-5);
-    this.maxDate.setDate(30);
+    this.minDate.setDate(-30);
+    this.maxDate.setDate(this.maxDate.getDate() + 30);
   }
 
   addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
