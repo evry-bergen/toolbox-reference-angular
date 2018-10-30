@@ -36,6 +36,7 @@ pipeline {
                   ws("${env.WORKSPACE}/${env.BUILD_NUMBER}") {
                     def testbed = docker.image('node:10')
                     testbed.inside(){
+                      sh "npm run license-checker"
                       sh "npm run build"
                       sh "npm run citest"
                     }
