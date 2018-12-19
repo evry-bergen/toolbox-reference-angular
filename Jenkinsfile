@@ -25,6 +25,7 @@ pipeline {
                     testbed.inside(){
                       sh "npm install"
                       sh "npm audit"
+                      sh "npm run license-checker"
                     }
                   }
                 }
