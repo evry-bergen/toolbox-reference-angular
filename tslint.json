@@ -119,13 +119,11 @@
     "directive-selector": [
       true,
       "attribute",
-      "fritidsfiske",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "fritidsfiske",
       "kebab-case"
     ],
     "no-input-rename": true,
