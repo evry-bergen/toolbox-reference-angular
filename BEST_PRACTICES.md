@@ -3,7 +3,7 @@ Use the `trackBy` function when using `ngFor`
 
 Angular will keep track of changes and only re-render changed elements
 
-```
+``` javascript
 // in the template
 <li *ngFor="let item of items; trackBy: trackByFn">{{ item }}</li>
 
@@ -51,7 +51,7 @@ Create an `index.ts` for simplifying imports/exports of components.
 
 ### 13. Shorten relative paths with aliases
 Add aliases for commonly used paths
-```
+``` javascript
 {
 ...
   "compilerOptions": {
@@ -68,6 +68,29 @@ Add aliases for commonly used paths
 
 ### 14. Use SCSS variables
 We don't like to repeat ourselves, so any color or other variables should be defined in `/styles/utilities/variables.scss`
+
+### 15. Clean up subscriptions
+When subscribing to observables, always make sure you unsubscribe from them appropriately by using operators like `take`, `takeUntil`, etc. Failing to unsubscribe may cause unwanted memory leaks. 
+
+``` javascript
+private _destroyed$ = new Subject();
+
+public ngOnInit (): void {
+    iAmAnObservable
+    .pipe(
+       map(value => value.item)
+      // We want to listen to iAmAnObservable until the component is destroyed,
+       takeUntil(this._destroyed$)
+     )
+    .subscribe(item => this.textToDisplay = item);
+}
+
+public ngOnDestroy (): void {
+    this._destroyed$.next();
+    this._destroyed$.complete();
+}
+```
+
 
 ## Read more at:
 - https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/
