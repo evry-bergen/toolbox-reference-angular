@@ -5,7 +5,6 @@ import { SharedModule } from 'app/shared/index.shared';
 import { AppRouterModule } from 'app/app.routes';
 import { HomeModule } from 'app/home/index.home';
 import { ErrorModule } from 'app/error/index.error';
-import { FormGroupModule } from 'app/form-group/index.form-group';
 import { TableModule } from 'app/responsive_table/index.responsive';
 import { NavigationDestinationModule } from 'app/navigation-destination/index.navigation';
 // translation
@@ -27,7 +26,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRouterModule,
     BrowserAnimationsModule,
     ErrorModule,
-    FormGroupModule,
     HomeModule,
     NavigationDestinationModule,
     TableModule,
