@@ -5,16 +5,16 @@
     "experimentalDecorators": true,
     "baseUrl": "./",
     "types": [],
-    "paths": {
-    }
+    "paths": {}
   },
   "exclude": [
     "test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "**/*.stories.ts"
   ],
   "angularCompilerOptions": {
     "preserveWhitespaces": false,
     "skipMetadataEmit": true,
-    "annotateForClosureCompiler":true
+    "annotateForClosureCompiler": true
   }
 }
